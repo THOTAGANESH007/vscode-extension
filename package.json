@@ -2,7 +2,7 @@
   "name": "action-audio-thala",
   "displayName": "Action Audio thala",
   "description": "Provides audible notifications for common editor events such as saving files and starting debug sessions.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.90.0"
   },
