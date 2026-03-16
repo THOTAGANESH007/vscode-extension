@@ -35,6 +35,6 @@ This extension currently uses the following commands:
 
 ## Release Notes
 
-### 0.0.1
+### 0.1.1
 
 - Initial release with Save and Run triggers.

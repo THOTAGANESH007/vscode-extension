@@ -1,6 +1,6 @@
 {
-  "name": "action-audio-thala",
-  "displayName": "Action Audio thala",
+  "name": "jai-balayya-thala",
+  "displayName": "jai balayya",
   "description": "Provides audible notifications for common editor events such as saving files and starting debug sessions.",
   "version": "0.1.0",
   "engines": {
