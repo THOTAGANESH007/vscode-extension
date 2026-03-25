@@ -26,7 +26,7 @@ Ensure your system has a command-line audio player installed:
 
 This extension currently uses the following commands:
 
-- `faahh-sound.play`: Manually trigger the notification sound.
+- `jai-balayya-sound.play`: Manually trigger the notification sound.
 
 ## Known Issues
 
