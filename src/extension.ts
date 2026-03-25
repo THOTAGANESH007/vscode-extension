@@ -8,7 +8,7 @@ import { exec } from "child_process";
 const sound = require("sound-play");
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log("Action Audio Thala is now active!");
+  // console.log("Action Audio Thala is now active!");
 
   /**
    * Main function to play the sound based on the Operating System
