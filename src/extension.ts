@@ -9,11 +9,17 @@ const sound = require("sound-play");
 
 export function activate(context: vscode.ExtensionContext) {
   // console.log("Action Audio Thala is now active!");
-
+  let lastPlayedTime = 0;
+  const COOLDOWN_MS = 500;
   /**
    * Main function to play the sound based on the Operating System
    */
   function playFaahhSound() {
+    const now = Date.now();
+    if (now - lastPlayedTime < COOLDOWN_MS) {
+      return; // Skip if played too recently
+    }
+    lastPlayedTime = now;
     const audioPath = path.join(context.extensionPath, "assets", "faahh.wav");
 
     // Safety check: ensure the file exists
@@ -69,6 +75,16 @@ export function activate(context: vscode.ExtensionContext) {
     playFaahhSound();
   });
   context.subscriptions.push(disposableRun);
+
+  // 4. BREAKPOINT / STEP LISTENER
+  // This triggers every time the debugger pauses (Breakpoint, Step Over, Step Into, etc.)
+  let disposableStep = vscode.debug.onDidChangeActiveStackItem((e) => {
+    // If e is defined, it means the debugger has stopped on a specific line
+    if (e) {
+      playFaahhSound();
+    }
+  });
+  context.subscriptions.push(disposableStep);
 }
 
 export function deactivate() {}

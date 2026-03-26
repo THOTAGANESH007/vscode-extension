@@ -2,7 +2,7 @@
   "name": "jai-balayya-thala",
   "displayName": "jai balayya",
   "description": "Provides audible notifications for common editor events such as saving files and starting debug sessions.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "engines": {
     "vscode": "^1.110.0"
   },
